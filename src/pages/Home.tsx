@@ -1,34 +1,24 @@
 import { PageLayout } from '@/components/layout/PageLayout';
 import { HeroSection } from '@/components/HeroSection';
-import { TheTransmissionSection } from '@/components/home/TheTransmissionSection';
-import { RecentWorksSection } from '@/components/home/RecentWorksSection';
-import { MusicSection } from '@/components/home/MusicSection';
-import { AvailableNowSection } from '@/components/home/AvailableNowSection';
-import { ArtifactsSection } from '@/components/home/ArtifactsSection';
+import { WhatYoullFindSection } from '@/components/home/WhatYoullFindSection';
+import { HomeFaqSection } from '@/components/home/HomeFaqSection';
+import { ValueProofSection } from '@/components/home/ValueProofSection';
 import { ExploreTilesSection } from '@/components/home/ExploreTilesSection';
+import { RecentWorksSection } from '@/components/home/RecentWorksSection';
+import { AvailableNowSection } from '@/components/home/AvailableNowSection';
+import { FinalCtaSection } from '@/components/home/FinalCtaSection';
 
 const Home = () => {
   return (
-    <PageLayout>
-      {/* Hero Section - kept exactly as-is */}
+    <PageLayout showTorus>
       <HeroSection />
-      
-      {/* The Transmission Section */}
-      <TheTransmissionSection />
-      
-      {/* Recent Works Section */}
-      <RecentWorksSection />
-      {/* Music Section */}
-      <MusicSection />
-      
-      {/* Available Now Section */}
-      <AvailableNowSection />
-      
-      {/* Artifacts Section - Poems with abstract imagery */}
-      <ArtifactsSection />
-      
-      {/* Explore Tiles Section - moved below Artifacts */}
+      <WhatYoullFindSection />
+      <ValueProofSection />
+      <HomeFaqSection />
       <ExploreTilesSection />
+      <RecentWorksSection />
+      <AvailableNowSection />
+      <FinalCtaSection />
     </PageLayout>
   );
 };

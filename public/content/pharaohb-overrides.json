@@ -1,0 +1,158 @@
+{
+  "exclude_ids": [],
+  "exclude_contains": [],
+  "item_overrides": {},
+  "rewrite_rules": [
+    {
+      "source_path_contains": "_poem",
+      "set": {
+        "type": "writing",
+        "format": "poetry",
+        "need": "creative-expression"
+      }
+    },
+    {
+      "source_path_contains": "Poetry_",
+      "set": {
+        "type": "writing",
+        "format": "poetry",
+        "need": "creative-expression"
+      }
+    },
+    {
+      "source_path_contains": "Audiobook_",
+      "set": {
+        "type": "media",
+        "format": "audiobook",
+        "href": "/media?category=audiobook",
+        "need": "books-and-tools"
+      }
+    },
+    {
+      "source_path_contains": "_Audiobook",
+      "set": {
+        "type": "media",
+        "format": "audiobook",
+        "href": "/media?category=audiobook",
+        "need": "books-and-tools"
+      }
+    },
+    {
+      "source_path_contains": "Frequency_",
+      "set": {
+        "type": "media",
+        "format": "frequency",
+        "href": "/media?category=frequency",
+        "need": "creative-expression"
+      }
+    },
+    {
+      "source_path_contains": "_Frequency",
+      "set": {
+        "type": "media",
+        "format": "frequency",
+        "href": "/media?category=frequency",
+        "need": "creative-expression"
+      }
+    },
+    {
+      "source_path_contains": "Meditation_",
+      "set": {
+        "type": "media",
+        "format": "meditation",
+        "href": "/media?category=affirmation",
+        "need": "creative-expression"
+      }
+    },
+    {
+      "source_path_contains": "_Meditation",
+      "set": {
+        "type": "media",
+        "format": "meditation",
+        "href": "/media?category=affirmation",
+        "need": "creative-expression"
+      }
+    },
+    {
+      "source_path_contains": "Affirmation_",
+      "set": {
+        "type": "media",
+        "format": "meditation",
+        "href": "/media?category=affirmation",
+        "need": "build-discipline"
+      }
+    },
+    {
+      "source_path_contains": "_Affirmation",
+      "set": {
+        "type": "media",
+        "format": "meditation",
+        "href": "/media?category=affirmation",
+        "need": "build-discipline"
+      }
+    },
+    {
+      "source_path_contains": "Spoken_word_",
+      "set": {
+        "type": "media",
+        "format": "spoken-word",
+        "href": "/media?category=spoken-word",
+        "need": "creative-expression"
+      }
+    },
+    {
+      "source_path_contains": "spoken-word",
+      "set": {
+        "type": "media",
+        "format": "spoken-word",
+        "href": "/media?category=spoken-word",
+        "need": "creative-expression"
+      }
+    },
+    {
+      "source_path_contains": "Teachings_",
+      "set": {
+        "type": "media",
+        "format": "teaching",
+        "href": "/media?category=teaching",
+        "need": "think-clearly"
+      }
+    },
+    {
+      "source_path_contains": "_Teaching",
+      "set": {
+        "type": "media",
+        "format": "teaching",
+        "href": "/media?category=teaching",
+        "need": "think-clearly"
+      }
+    },
+    {
+      "source_path_contains": "Song_",
+      "set": {
+        "type": "media",
+        "format": "music",
+        "href": "/media?category=music",
+        "need": "creative-expression"
+      }
+    },
+    {
+      "source_path_contains": "_Song",
+      "set": {
+        "type": "media",
+        "format": "music",
+        "href": "/media?category=music",
+        "need": "creative-expression"
+      }
+    },
+    {
+      "source_path_contains": "Music_",
+      "set": {
+        "type": "media",
+        "format": "music",
+        "href": "/media?category=music",
+        "need": "creative-expression"
+      }
+    }
+  ]
+}

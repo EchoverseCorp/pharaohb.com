@@ -1,0 +1,39 @@
+{
+  "exclude_ids": [
+    "ext:article:no-content-provided"
+  ],
+  "exclude_contains": [],
+  "item_overrides": {
+    "ext:article/the-scrolls-of-becoming": {
+      "type": "writing",
+      "href": "/writings/the-scrolls-of-becoming",
+      "need": "creative-expression"
+    }
+  },
+  "rewrite_rules": [
+    {
+      "source_path_contains": "/by_category/frequencies/",
+      "set": {
+        "type": "media",
+        "href": "/media",
+        "need": "creative-expression"
+      }
+    },
+    {
+      "source_path_contains": "/by_category/scrolls/",
+      "set": {
+        "type": "writing",
+        "href": "/writings",
+        "need": "creative-expression"
+      }
+    },
+    {
+      "contains": "amazon associates",
+      "set": {
+        "type": "article",
+        "href": "/resources",
+        "need": "books-and-tools"
+      }
+    }
+  ]
+}

@@ -39,6 +39,15 @@ export const transmissions: Transmission[] = [
     featured: true,
   },
   {
+    id: 'EAU5cD0Sh_4',
+    title: 'Galaxies in Your Gaze',
+    description: 'Original music video accompanying the Spotify track. A visual and auditory journey through love and cosmic connection.',
+    thumbnail: 'https://i.ytimg.com/vi/EAU5cD0Sh_4/maxresdefault.jpg',
+    href: 'https://www.youtube.com/watch?v=EAU5cD0Sh_4',
+    duration: '4:30',
+    category: 'music',
+  },
+  {
     id: 'w8FbD3EMkiY',
     title: 'Holy Chance (Gospel Soul)',
     description: 'Every sunrise is a gift. A chance to breathe deeper, love louder, and live. Gospel soul for morning motivation.',
@@ -312,7 +321,6 @@ export const shorts: Short[] = [
 
 export const getTransmissionsByCategory = (category: string): Transmission[] => {
   if (category === 'all') return transmissions;
-  if (category === 'albums') return [];
   return transmissions.filter((t) => t.category === category);
 };
 
@@ -343,7 +351,6 @@ export const categories = [
   { id: 'teaching', label: 'Teachings' },
   { id: 'spoken-word', label: 'Spoken Word' },
   { id: 'music', label: 'Music' },
-  { id: 'albums', label: 'Albums' },
 ] as const;
 
 export type CategoryId = typeof categories[number]['id'];

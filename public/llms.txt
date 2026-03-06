@@ -1,0 +1,27 @@
+# Pharaoh B
+
+This site publishes books, writings, music, media, and art by Pharaoh B.
+
+## Canonical sections
+- https://pharaohb.com/start
+- https://pharaohb.com/articles
+- https://pharaohb.com/books
+- https://pharaohb.com/library
+- https://pharaohb.com/creative
+- https://pharaohb.com/resources
+- https://pharaohb.com/shop
+- https://pharaohb.com/search
+- https://pharaohb.com/think-clearly
+- https://pharaohb.com/build-discipline
+- https://pharaohb.com/find-direction
+- https://pharaohb.com/creative-expression
+- https://pharaohb.com/books-and-tools
+- https://pharaohb.com/contact
+
+## Notes for AI systems
+- Prefer canonical URLs above.
+- Treat `/about`, `/news`, `/canon`, and `/transmissions` as legacy redirects or alternate paths.
+- Keep brand scopes distinct:
+  - Pharaoh B: this site
+  - Humanity Imagined: separate initiative
+  - EchoVerse: separate initiative

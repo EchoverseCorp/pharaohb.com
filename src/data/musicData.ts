@@ -9,7 +9,6 @@ export interface Track {
   coverImage?: string;
   youtubeUrl?: string;
   spotifyUrl?: string;
-  appleMusicUrl?: string;
   category: 'frequency' | 'ambient' | 'meditation' | 'original';
 }
 
@@ -56,11 +55,6 @@ export const streamingPlatforms = [
     id: 'spotify',
     name: 'Spotify',
     url: '#', // Add Spotify link
-  },
-  {
-    id: 'apple-music',
-    name: 'Apple Music',
-    url: '#', // Add Apple Music link
   },
 ];
 

@@ -24,8 +24,8 @@ const Music = () => {
       <SectionContainer>
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="font-cormorant text-xl text-muted-foreground">
-            Sound as medicine. Composition as ceremony. Each album is crafted to attune 
-            consciousness to higher frequencies.
+            Music, frequencies, and spoken-word tracks designed to support
+            focus, emotional reset, and creative momentum.
           </p>
         </div>
 

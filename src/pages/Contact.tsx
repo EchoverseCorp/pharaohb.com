@@ -14,11 +14,10 @@ const Contact = () => {
     message: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [newsletterEmail, setNewsletterEmail] = useState('');
-  const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // TODO: Connect to email service (Formspree, Netlify Forms, etc.)
     console.log('Form submitted:', formState);
     setIsSubmitted(true);
   };
@@ -27,35 +26,24 @@ const Contact = () => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Newsletter signup:', newsletterEmail);
-    setNewsletterSubmitted(true);
-  };
-
   return (
     <PageLayout>
       {/* Header */}
       <section className="pt-32 pb-12 px-6 text-center">
         <div className="max-w-3xl mx-auto">
-          {/* Symbol */}
-          <div className="mb-6">
-            <span className="text-4xl">𓂋</span>
-          </div>
-
           <h1 className="font-cinzel text-4xl md:text-5xl lg:text-6xl text-gold-gradient mb-4">
-            Connect
+            Contact
           </h1>
           <p className="font-cormorant text-xl md:text-2xl text-muted-foreground italic mb-8">
-            The doorway between realms
+            Reach Out
           </p>
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="w-16 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
             <img src={brandSymbol} alt="" className="w-10 h-10 object-contain" />
             <div className="w-16 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
           </div>
-          <p className="font-cormorant text-lg text-muted-foreground max-w-2xl mx-auto">
-            Whether you seek collaboration, have questions about the work, or simply wish to share your experience—this channel is open.
+          <p className="font-cormorant text-lg text-muted-foreground">
+            For inquiries, collaborations, or just to say hello.
           </p>
         </div>
       </section>
@@ -164,44 +152,6 @@ const Contact = () => {
         <div className="w-20 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
       </div>
 
-      {/* Join the Sacred Circle - Newsletter */}
-      <section className="py-16 px-6">
-        <div className="max-w-xl mx-auto text-center">
-          <h2 className="font-cinzel text-2xl md:text-3xl text-gold-gradient mb-6">
-            Join the Sacred Circle
-          </h2>
-          <p className="font-cormorant text-lg text-muted-foreground mb-10 leading-relaxed">
-            Receive transmissions from the eternal realm. New writings, releases, and exclusive offerings delivered directly to your sanctuary. No noise. Only signal.
-          </p>
-
-          {newsletterSubmitted ? (
-            <div className="py-8">
-              <img src={brandSymbol} alt="" className="w-10 h-10 mx-auto mb-4 object-contain" />
-              <p className="font-cinzel text-sm tracking-wider text-primary">
-                Welcome to the Circle
-              </p>
-            </div>
-          ) : (
-            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <Input
-                type="email"
-                value={newsletterEmail}
-                onChange={(e) => setNewsletterEmail(e.target.value)}
-                placeholder="Enter your email"
-                className="bg-muted/30 border-border focus:border-primary font-cormorant flex-1"
-                required
-              />
-              <button
-                type="submit"
-                className="px-8 py-3 bg-primary text-primary-foreground font-cinzel text-xs tracking-wider uppercase transition-all duration-300 hover:bg-primary/90 whitespace-nowrap"
-              >
-                Subscribe
-              </button>
-            </form>
-          )}
-        </div>
-      </section>
-
       {/* Alternative Contact */}
       <section className="py-12 px-6 text-center">
         <div className="max-w-2xl mx-auto">
@@ -243,14 +193,6 @@ const Contact = () => {
             className="font-cinzel text-sm tracking-wider text-muted-foreground hover:text-primary transition-colors"
           >
             Instagram
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-cinzel text-sm tracking-wider text-muted-foreground hover:text-primary transition-colors"
-          >
-            Twitter
           </a>
         </div>
       </section>

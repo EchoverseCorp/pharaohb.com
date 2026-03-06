@@ -20,14 +20,14 @@ const Art = () => {
       <PageHeader
         title="Art"
         subtitle="Visual Transmissions"
-        orientationText="Original digital artwork exploring consciousness, symbolism, and the architecture of perception."
+        orientationText="Original visual work with story, symbolism, and collectible print editions."
       />
 
       <SectionContainer>
         <div className="max-w-3xl mx-auto text-center mb-12">
           <p className="font-cormorant text-xl text-muted-foreground">
-            Each piece is a doorway. What you see depends on how you look. 
-            Available as archival prints, gallery canvas, and museum-quality frames.
+            Visual collections created to communicate ideas beyond language.
+            Available as archival prints and gallery-ready formats.
           </p>
         </div>
 

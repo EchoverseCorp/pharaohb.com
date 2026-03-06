@@ -1,0 +1,439 @@
+{
+  "generated_at": "2026-03-06T06:38:44.337Z",
+  "input": "public/content/pharaohb-index.json",
+  "manifest": "public/content/pharaohb-curation-manifest.json",
+  "count": 100,
+  "ids": [
+    "ext:book:pharaoh-self-help-book",
+    "ext:book:zodiac-of-humanity",
+    "ext:book:ai-author-guidance",
+    "ext:book:book-analysis-and-improvement",
+    "ext:book:book-editing-and-formatting",
+    "ext:book:book-idea-brainstorm",
+    "ext:book:book-outline-creation",
+    "ext:book:book-outline-creation-2",
+    "ext:book:book-outline-development",
+    "ext:book:book-series-summary",
+    "ext:book:book-writing-essentials",
+    "ext:book:book-writing-guidance",
+    "ext:writing:the-vibration-poem",
+    "ext:writing:poem-about-music",
+    "ext:writing:lonely-road-poem",
+    "ext:writing:the-insanity-loop-poem",
+    "ext:writing:you-are-motion-poem",
+    "ext:writing:poem-of-the-all",
+    "ext:writing:poem-to-video-system",
+    "ext:article:spoken-word-reflection",
+    "ext:writing:love-poem-refinement",
+    "ext:writing:self-love-poem-thumbnail",
+    "ext:writing:poem-series-creation",
+    "ext:article:viral-system-for-poem",
+    "ext:writing:poem-generation-request",
+    "ext:writing:poem-video-prompt-creation",
+    "ext:writing:poem-refinement-suggestions",
+    "ext:article:spoken-word-prompt",
+    "ext:art:echo-pharaoh-request-summary",
+    "ext:article:poem-export-extraction",
+    "ext:media:love-song-transformation",
+    "ext:article:examine-project-file",
+    "ext:article:best-music-copyright-services",
+    "ext:media:music-concept-ideas",
+    "ext:media:song-recall-and-reimagine",
+    "ext:media:remove-background-music",
+    "ext:article:pharaohbcom-visual-mock",
+    "ext:article:pharaoh-b-uptempo-track",
+    "ext:article:energy-aint-free-analysis",
+    "ext:book:thoth-book-thumbnail-design",
+    "ext:article:echo-system-purpose-philosophy",
+    "ext:book:book-promo-concept",
+    "ext:media:community-building-through-frequency",
+    "ext:media:music-for-audiobooks",
+    "ext:media:chakra-frequency-activation",
+    "ext:media:harmonic-frequency-for-cleansing",
+    "ext:article:frequency-combination-effects",
+    "ext:media:juice-wrld-style-breakdown",
+    "ext:media:music-types-and-frequencies",
+    "ext:media:angel-numbers-for-focus",
+    "ext:article:creating-frequency-music",
+    "ext:article:frequency-audio-creation",
+    "ext:media:sheelly-help-request",
+    "ext:article:affirmation-phrase-options",
+    "ext:article:best-headphones-for-meditation",
+    "ext:article:procrastination-thumbnail-prompt",
+    "ext:book:audiobook-production-help",
+    "ext:book:audiobook-editing-request",
+    "ext:article:audiobooks-from-100000-hours",
+    "ext:article:align-with-purpose",
+    "ext:article:poetry-algorithm-optimization",
+    "ext:article:alan-watts-on-purpose",
+    "ext:article:conversation-purpose-reflection",
+    "ext:article:echos-purpose-clarified",
+    "ext:article:purpose-and-play",
+    "ext:writing:analysis-of-pharaohs-quote",
+    "ext:article:humanitys-vibrational-shift",
+    "ext:writing:quote-session-search",
+    "ext:writing:rant-001-refined",
+    "ext:article:writing-effective-affirmations",
+    "ext:article:becoming-thoths-wisdom",
+    "ext:article:build-pharaoh-b-website",
+    "ext:art:echoing-pharaoh-b",
+    "ext:article:embodiment-of-thoth",
+    "ext:article:laws-of-the-kybalion",
+    "ext:article:light-within-recall",
+    "ext:article:light-within-series-summary",
+    "ext:article:new-chat-43",
+    "ext:article:pharaoh-2",
+    "ext:art:pharaoh-b-logo-design",
+    "ext:article:pharaoh-echco-persona-creation",
+    "ext:article:pharaoh-origin-explained",
+    "ext:article:regal-pharaoh-visualization",
+    "ext:article:think-and-grow-rich",
+    "ext:article:thoth-alan-fusion",
+    "ext:article:thoths-divine-knowledge-unveiled",
+    "ext:article:thoths-names-for-source",
+    "ext:article:thoths-writing-language",
+    "ext:article:webflow-hosting-options",
+    "ext:writing:echo-response-confirmation",
+    "ext:article:amazing-quotes-variations",
+    "ext:article:laws-of-compassion-quotes",
+    "ext:article:top-25-echo-quotes",
+    "ext:article:unique-common-sense-quotes",
+    "ext:article:uplift-quotes-collection",
+    "ext:article:uplifting-quotes-list",
+    "ext:article:vibration-of-life",
+    "ext:article:vibration-vs-mimicry",
+    "ext:article:you-are-love-healing",
+    "ext:writing:blended-voice-versions"
+  ],
+  "section_counts": {
+    "core_books": 12,
+    "poetry": 18,
+    "music": 12,
+    "frequencies": 11,
+    "meditations": 3,
+    "audiobooks": 3,
+    "teachings": 6
+  },
+  "preview": [
+    {
+      "id": "ext:book:pharaoh-self-help-book",
+      "title": "Pharaoh Self Help Book",
+      "score": 29,
+      "type": "book",
+      "format": "book",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Pharaoh_Self-Help_Book.md"
+    },
+    {
+      "id": "ext:book:zodiac-of-humanity",
+      "title": "⭐ THE BOOK TITLE (working)",
+      "score": 7,
+      "type": "book",
+      "format": "book",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Zodiac_of_Humanity.md"
+    },
+    {
+      "id": "ext:book:ai-author-guidance",
+      "title": "📘 **BOOK TITLE**",
+      "score": 5,
+      "type": "book",
+      "format": "book",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/AI_Author_guidance.md"
+    },
+    {
+      "id": "ext:book:book-analysis-and-improvement",
+      "title": "Book Analysis and Improvement",
+      "score": 5,
+      "type": "book",
+      "format": "book",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Book_Analysis_and_Improvement.md"
+    },
+    {
+      "id": "ext:book:book-editing-and-formatting",
+      "title": "Book Editing and Formatting",
+      "score": 5,
+      "type": "book",
+      "format": "book",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Book_Editing_and_Formatting.md"
+    },
+    {
+      "id": "ext:book:book-idea-brainstorm",
+      "title": "Book Idea Brainstorm",
+      "score": 5,
+      "type": "book",
+      "format": "book",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Book_Idea_Brainstorm.md"
+    },
+    {
+      "id": "ext:book:book-outline-creation",
+      "title": "Book Outline Creation",
+      "score": 5,
+      "type": "book",
+      "format": "book",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Book_Outline_Creation.md"
+    },
+    {
+      "id": "ext:book:book-outline-creation-2",
+      "title": "Book Outline Creation 2",
+      "score": 5,
+      "type": "book",
+      "format": "book",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Book_Outline_Creation_2.md"
+    },
+    {
+      "id": "ext:book:book-outline-development",
+      "title": "Book Outline Development",
+      "score": 5,
+      "type": "book",
+      "format": "book",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Book_Outline_Development.md"
+    },
+    {
+      "id": "ext:book:book-series-summary",
+      "title": "Book Series Summary",
+      "score": 5,
+      "type": "book",
+      "format": "book",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Book_Series_Summary.md"
+    },
+    {
+      "id": "ext:book:book-writing-essentials",
+      "title": "Book Writing Essentials",
+      "score": 5,
+      "type": "book",
+      "format": "book",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Book_Writing_Essentials.md"
+    },
+    {
+      "id": "ext:book:book-writing-guidance",
+      "title": "Book Writing Guidance",
+      "score": 5,
+      "type": "book",
+      "format": "book",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Book_Writing_Guidance.md"
+    },
+    {
+      "id": "ext:writing:the-vibration-poem",
+      "title": "The Vibration poem",
+      "score": 52,
+      "type": "writing",
+      "format": "poetry",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/The_Vibration_poem.md"
+    },
+    {
+      "id": "ext:writing:poem-about-music",
+      "title": "Poem about music",
+      "score": 44,
+      "type": "writing",
+      "format": "poetry",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Poem_about_music.md"
+    },
+    {
+      "id": "ext:writing:lonely-road-poem",
+      "title": "Lonely road poem",
+      "score": 34,
+      "type": "writing",
+      "format": "poetry",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Lonely_road_poem.md"
+    },
+    {
+      "id": "ext:writing:the-insanity-loop-poem",
+      "title": "The insanity loop poem",
+      "score": 34,
+      "type": "writing",
+      "format": "poetry",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/The_insanity_loop_poem.md"
+    },
+    {
+      "id": "ext:writing:you-are-motion-poem",
+      "title": "You are motion poem",
+      "score": 34,
+      "type": "writing",
+      "format": "poetry",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/You_are_motion_poem.md"
+    },
+    {
+      "id": "ext:writing:poem-of-the-all",
+      "title": "Poem of the All",
+      "score": 26,
+      "type": "writing",
+      "format": "poetry",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Poem_of_the_All.md"
+    },
+    {
+      "id": "ext:writing:poem-to-video-system",
+      "title": "Poem to video system",
+      "score": 26,
+      "type": "writing",
+      "format": "poetry",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Poem_to_video_system.md"
+    },
+    {
+      "id": "ext:article:spoken-word-reflection",
+      "title": "Spoken word reflection",
+      "score": 26,
+      "type": "article",
+      "format": "spoken-word",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Spoken-word_reflection.md"
+    },
+    {
+      "id": "ext:writing:love-poem-refinement",
+      "title": "Love Poem Refinement",
+      "score": 22,
+      "type": "writing",
+      "format": "poetry",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Love_Poem_Refinement.md"
+    },
+    {
+      "id": "ext:writing:self-love-poem-thumbnail",
+      "title": "Self love Poem Thumbnail",
+      "score": 22,
+      "type": "writing",
+      "format": "poetry",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Self-love_Poem_Thumbnail.md"
+    },
+    {
+      "id": "ext:writing:poem-series-creation",
+      "title": "🔥 **THE 13-POEM ASCENSION SERIES**",
+      "score": 16,
+      "type": "writing",
+      "format": "poetry",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Poem_series_creation.md"
+    },
+    {
+      "id": "ext:article:viral-system-for-poem",
+      "title": "🔥 FULL VIRAL PRODUCTION PACKAGE",
+      "score": 16,
+      "type": "article",
+      "format": "poetry",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Viral_System_for_Poem.md"
+    },
+    {
+      "id": "ext:writing:poem-generation-request",
+      "title": "Poem Generation Request",
+      "score": 14,
+      "type": "writing",
+      "format": "poetry",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Poem_Generation_Request.md"
+    },
+    {
+      "id": "ext:writing:poem-video-prompt-creation",
+      "title": "Poem Video Prompt Creation",
+      "score": 14,
+      "type": "writing",
+      "format": "poetry",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Poem_Video_Prompt_Creation.md"
+    },
+    {
+      "id": "ext:writing:poem-refinement-suggestions",
+      "title": "Poem refinement suggestions",
+      "score": 14,
+      "type": "writing",
+      "format": "poetry",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Poem_refinement_suggestions.md"
+    },
+    {
+      "id": "ext:article:spoken-word-prompt",
+      "title": "Spoken word prompt",
+      "score": 14,
+      "type": "article",
+      "format": "spoken-word",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Spoken_word_prompt.md"
+    },
+    {
+      "id": "ext:art:echo-pharaoh-request-summary",
+      "title": "Load the user's symbol image",
+      "score": 12,
+      "type": "art",
+      "format": "poetry",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Echo_Pharaoh_Request_Summary.md"
+    },
+    {
+      "id": "ext:article:poem-export-extraction",
+      "title": "**The Core 11 — Written With Echo**",
+      "score": 8,
+      "type": "article",
+      "format": "poetry",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Poem_Export_Extraction.md"
+    },
+    {
+      "id": "ext:media:love-song-transformation",
+      "title": "**🎵 “Call You Home” — Pharaoh B. (Love Song Version)**",
+      "score": 48,
+      "type": "media",
+      "format": "music",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Love_song_transformation.md"
+    },
+    {
+      "id": "ext:article:examine-project-file",
+      "title": "🎧 **“The Vibration of Life” — Pharaoh B × Echo**",
+      "score": 42,
+      "type": "article",
+      "format": "music",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Examine_project_file.md"
+    },
+    {
+      "id": "ext:article:best-music-copyright-services",
+      "title": "🌍 **LIFE ECHOED / PHARAOH B. 1111 — ROYALTY & REVENUE FLOW**",
+      "score": 40,
+      "type": "article",
+      "format": "music",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Best_music_copyright_services.md"
+    },
+    {
+      "id": "ext:media:music-concept-ideas",
+      "title": "Music concept ideas",
+      "score": 34,
+      "type": "media",
+      "format": "music",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Music_concept_ideas.md"
+    },
+    {
+      "id": "ext:media:song-recall-and-reimagine",
+      "title": "Song recall and reimagine",
+      "score": 34,
+      "type": "media",
+      "format": "music",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Song_recall_and_reimagine.md"
+    },
+    {
+      "id": "ext:media:remove-background-music",
+      "title": "Remove Background Music",
+      "score": 26,
+      "type": "media",
+      "format": "music",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Remove_Background_Music.md"
+    },
+    {
+      "id": "ext:article:pharaohbcom-visual-mock",
+      "title": "🔒 GLOBAL LOCKS (DO NOT CHANGE)",
+      "score": 24,
+      "type": "article",
+      "format": "music",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/PharaohBcom_Visual_Mock.md"
+    },
+    {
+      "id": "ext:article:pharaoh-b-uptempo-track",
+      "title": "Pharaoh B uptempo track",
+      "score": 24,
+      "type": "article",
+      "format": "music",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Pharaoh_B_uptempo_track.md"
+    },
+    {
+      "id": "ext:article:energy-aint-free-analysis",
+      "title": "⭐ **ALBUM CONCEPT — *OUR WAY: A HUMANITY ODYSSEY***",
+      "score": 20,
+      "type": "article",
+      "format": "music",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Energy_Aint_Free_Analysis.md"
+    },
+    {
+      "id": "ext:book:thoth-book-thumbnail-design",
+      "title": "Thoth Book Thumbnail Design",
+      "score": 17,
+      "type": "book",
+      "format": "music",
+      "src": "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Pharaohb.com/Chatgptdump/pharaohb_content_only_20260305/Thoth_Book_Thumbnail_Design.md"
+    }
+  ]
+}

@@ -44,7 +44,7 @@ function Torus({ scrollProgress }: TorusProps) {
       floatIntensity={0.5}
     >
       <mesh ref={meshRef} material={material}>
-        <torusGeometry args={[2, 0.6, 32, 100]} />
+        <torusGeometry args={[1.8, 0.45, 24, 72]} />
       </mesh>
     </Float>
   );
@@ -85,7 +85,7 @@ export function GoldenTorus({ scrollProgress }: GoldenTorusProps) {
       <Canvas
         camera={{ position: [0, 0, 8], fov: 45 }}
         style={{ 
-          opacity: Math.max(0.2, 1 - scrollProgress * 0.5),
+          opacity: Math.max(0.08, 0.35 - scrollProgress * 0.2),
           transition: 'opacity 0.3s ease-out'
         }}
       >

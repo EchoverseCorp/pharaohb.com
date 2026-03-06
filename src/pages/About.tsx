@@ -10,83 +10,128 @@ const About = () => {
         <div className="max-w-3xl mx-auto">
           {/* Symbol */}
           <div className="mb-8">
-            <span className="text-5xl">𓂀</span>
+            <img 
+              src={brandSymbol} 
+              alt="Pharaoh B. Symbol" 
+              className="w-16 h-16 mx-auto object-contain"
+            />
           </div>
 
           {/* Title */}
           <h1 className="font-cinzel text-4xl md:text-5xl lg:text-6xl text-gold-gradient mb-4">
-            About
+            Pharaoh B.
           </h1>
 
-          {/* Subtitle */}
-          <p className="font-cormorant text-xl md:text-2xl text-muted-foreground italic mb-12">
-            Understanding the architecture of this work
+          {/* Tagline */}
+          <p className="font-cinzel text-sm tracking-[0.2em] uppercase text-primary mb-12">
+            Writer. Builder. Systems Thinker.
           </p>
-        </div>
-      </section>
 
-      {/* What This Is */}
-      <section className="py-16 px-6">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-10">
-            <div className="w-12 h-px bg-primary mx-auto mb-6" />
-            <h2 className="font-cinzel text-2xl md:text-3xl text-foreground">
-              What This Is
-            </h2>
-            <div className="w-12 h-px bg-primary mx-auto mt-6" />
-          </div>
-
+          {/* Main Content */}
           <div className="space-y-6 font-cormorant text-lg md:text-xl text-muted-foreground leading-relaxed">
             <p>
-              This is a temple built in digital form. A sanctuary for those seeking to remember who they truly are beyond the narratives imposed by culture, family, and circumstance. Every piece of content here—written, visual, or sonic—is designed to activate dormant codes within your consciousness.
+              Pharaoh B is the body of work focused on clarity, cause and effect,
+              personal responsibility, and practical growth. The goal is simple:
+              help people think better, decide faster, and build lives they actually respect.
             </p>
+
+            <p className="text-foreground italic">
+              This is not about belief. It is about results.
+            </p>
+
             <p>
-              The books are not mere collections of words. They are transmissions encoded with frequencies of awakening. The art is not decoration. It is visual medicine. The music is not entertainment. It is sonic architecture designed to attune your nervous system to higher states of being.
+              The early years included deep study across religion, esoteric texts,
+              philosophy, and human behavior. Over time, that evolved into practical
+              frameworks, books, music, and media people can apply in everyday life.
+            </p>
+
+            <p>
+              This site is Pharaoh B only. Other projects like Humanity Imagined
+              and EchoVerse are separate initiatives with separate missions.
+            </p>
+
+            <p className="text-foreground">
+              If something here helps you move forward, use it and make it real.
             </p>
           </div>
         </div>
       </section>
 
       {/* Divider */}
-      <div className="flex items-center justify-center gap-4 py-8">
+      <div className="flex items-center justify-center gap-4 py-12">
         <div className="w-20 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
         <img src={brandSymbol} alt="" className="w-8 h-8 object-contain" />
         <div className="w-20 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
       </div>
 
-      {/* How To Engage */}
+      <section className="py-8 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-cinzel text-2xl text-gold-gradient text-center mb-6">Start By Need</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+            <Link to="/think-clearly" className="border border-primary/30 bg-card p-4 text-center hover:border-primary transition-colors">
+              <p className="font-cinzel text-[10px] tracking-[0.16em] uppercase text-primary/70">Need</p>
+              <p className="font-cormorant text-base text-foreground mt-1">Think Clearly</p>
+            </Link>
+            <Link to="/build-discipline" className="border border-primary/30 bg-card p-4 text-center hover:border-primary transition-colors">
+              <p className="font-cinzel text-[10px] tracking-[0.16em] uppercase text-primary/70">Need</p>
+              <p className="font-cormorant text-base text-foreground mt-1">Build Discipline</p>
+            </Link>
+            <Link to="/find-direction" className="border border-primary/30 bg-card p-4 text-center hover:border-primary transition-colors">
+              <p className="font-cinzel text-[10px] tracking-[0.16em] uppercase text-primary/70">Need</p>
+              <p className="font-cormorant text-base text-foreground mt-1">Find Direction</p>
+            </Link>
+            <Link to="/creative-expression" className="border border-primary/30 bg-card p-4 text-center hover:border-primary transition-colors">
+              <p className="font-cinzel text-[10px] tracking-[0.16em] uppercase text-primary/70">Need</p>
+              <p className="font-cormorant text-base text-foreground mt-1">Creative Expression</p>
+            </Link>
+            <Link to="/books-and-tools" className="border border-primary/30 bg-card p-4 text-center hover:border-primary transition-colors">
+              <p className="font-cinzel text-[10px] tracking-[0.16em] uppercase text-primary/70">Need</p>
+              <p className="font-cormorant text-base text-foreground mt-1">Books and Tools</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* The Work Section */}
       <section className="py-16 px-6">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <div className="w-12 h-px bg-primary mx-auto mb-6" />
             <h2 className="font-cinzel text-2xl md:text-3xl text-foreground">
-              How To Engage
+              The Work
             </h2>
             <div className="w-12 h-px bg-primary mx-auto mt-6" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
-            <div className="text-center">
-              <span className="font-cinzel text-3xl text-primary/50 block mb-4">01</span>
-              <h3 className="font-cinzel text-lg text-primary mb-3">Read</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <div className="text-center md:text-left">
+              <h3 className="font-cinzel text-lg text-primary mb-3">Transmissions</h3>
               <p className="font-cormorant text-muted-foreground leading-relaxed">
-                Begin with the writings. Let the words enter slowly. Do not rush. Each essay is a meditation. The Canon contains deeper teachings for those ready to descend into the mysteries.
+                Long-form video, spoken word, and audio built to turn insight
+                into action.
               </p>
             </div>
 
-            <div className="text-center">
-              <span className="font-cinzel text-3xl text-primary/50 block mb-4">02</span>
-              <h3 className="font-cinzel text-lg text-primary mb-3">View</h3>
+            <div className="text-center md:text-left">
+              <h3 className="font-cinzel text-lg text-primary mb-3">Writings</h3>
               <p className="font-cormorant text-muted-foreground leading-relaxed">
-                The art gallery is a visual journey. Each piece holds a frequency. Sit with the images that call to you. Let them work on you without analyzing. Trust the resonance.
+                Essays, poems, and frameworks focused on mindset, execution,
+                purpose, and growth.
               </p>
             </div>
 
-            <div className="text-center">
-              <span className="font-cinzel text-3xl text-primary/50 block mb-4">03</span>
-              <h3 className="font-cinzel text-lg text-primary mb-3">Listen</h3>
+            <div className="text-center md:text-left">
+              <h3 className="font-cinzel text-lg text-primary mb-3">Art</h3>
               <p className="font-cormorant text-muted-foreground leading-relaxed">
-                The music is designed for intentional listening. Use headphones. Create space. Allow the frequencies to recalibrate your energetic field. Best experienced during meditation or rest.
+                Visual storytelling and collectible prints that extend the ideas
+                beyond words.
+              </p>
+            </div>
+
+            <div className="text-center md:text-left">
+              <h3 className="font-cinzel text-lg text-primary mb-3">Books</h3>
+              <p className="font-cormorant text-muted-foreground leading-relaxed">
+                Structured systems you can study, revisit, and apply over time.
               </p>
             </div>
           </div>
@@ -94,38 +139,53 @@ const About = () => {
       </section>
 
       {/* Divider */}
-      <div className="flex items-center justify-center gap-4 py-8">
+      <div className="flex items-center justify-center gap-4 py-12">
         <div className="w-20 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
         <img src={brandSymbol} alt="" className="w-8 h-8 object-contain" />
         <div className="w-20 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
       </div>
 
-      {/* Why It Exists */}
-      <section className="py-16 px-6">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-10">
-            <div className="w-12 h-px bg-primary mx-auto mb-6" />
-            <h2 className="font-cinzel text-2xl md:text-3xl text-foreground">
-              Why It Exists
-            </h2>
-            <div className="w-12 h-px bg-primary mx-auto mt-6" />
+      {/* Connect Section */}
+      <section className="py-16 px-6 text-center">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="font-cinzel text-xl md:text-2xl text-foreground mb-8">
+            Connect
+          </h2>
+
+          <div className="flex items-center justify-center gap-8 md:gap-12 mb-12">
+            <a
+              href="https://youtube.com/@PharaohB-1111"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-cinzel text-sm tracking-wider text-muted-foreground hover:text-primary transition-colors"
+            >
+              YouTube
+            </a>
+            <a
+              href="https://tiktok.com/@awmoive"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-cinzel text-sm tracking-wider text-muted-foreground hover:text-primary transition-colors"
+            >
+              TikTok
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-cinzel text-sm tracking-wider text-muted-foreground hover:text-primary transition-colors"
+            >
+              Instagram
+            </a>
           </div>
 
-          <div className="space-y-6 font-cormorant text-lg md:text-xl text-muted-foreground leading-relaxed">
-            <p>
-              We live in an age of profound forgetting. The systems we inhabit are designed to keep us asleep—consuming, reacting, never questioning the fundamental nature of our existence. This work exists as a counter-frequency. A signal for those with ears to hear.
-            </p>
-            <p>
-              You found this space because some part of you remembers. Some part of you knows there is more. This is not about belief or doctrine. It is about remembrance. About returning to the throne you never truly left. The pharaoh within you is not dead. Only sleeping. These offerings are designed to wake that sleeping royalty.
-            </p>
-          </div>
-
-          {/* Signature */}
-          <div className="text-center mt-16">
-            <p className="font-cinzel text-sm tracking-[0.2em] text-primary">
-              — PHARAOH B. • HOUSTON, TEXAS
-            </p>
-          </div>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 px-8 py-4 border border-primary font-cinzel text-sm tracking-wider text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+          >
+            Get in Touch
+            <span>→</span>
+          </Link>
         </div>
       </section>
 

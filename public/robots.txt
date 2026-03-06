@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://id-preview--3f1dcfbb-5919-4eb1-9df2-adfb15963a22.lovable.app/sitemap.xml
+Sitemap: https://pharaohb.com/sitemap.xml

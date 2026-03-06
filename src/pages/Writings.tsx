@@ -12,15 +12,15 @@ const Writings = () => {
     <PageLayout>
       <PageHeader
         title="Writings"
-        subtitle="Transmissions from the threshold"
-        orientationText="Reflections offered as companions, not conclusions."
+        subtitle="Essays, poems, and practical reflections"
+        orientationText="Read by topic, apply what helps, return when needed."
       />
 
       <SectionContainer>
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="font-cormorant text-xl text-muted-foreground">
-            Essays, reflections, and letters from the edge of becoming. 
-            Words offered as companions for your journey.
+            Writing focused on mindset, discipline, purpose, and the real
+            decisions that shape everyday life.
           </p>
         </div>
 

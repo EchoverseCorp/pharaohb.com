@@ -1,0 +1,51 @@
+{
+  "max": 100,
+  "exclude_ids": [],
+  "include_ids": [],
+  "sections": {
+    "core_books": {
+      "max": 12,
+      "ids": [],
+      "include_formats": ["book"],
+      "include_keywords": ["book", "scroll", "thoth", "master key", "think and grow"],
+      "exclude_keywords": ["prompt", "template", "request", "fix"]
+    },
+    "poetry": {
+      "max": 20,
+      "ids": [],
+      "include_formats": ["poetry", "spoken-word"],
+      "include_keywords": ["poem", "poetry", "spoken word", "rant", "quote"]
+    },
+    "music": {
+      "max": 18,
+      "ids": [],
+      "include_formats": ["music"],
+      "include_keywords": ["music", "song", "album", "spotify", "youtube"]
+    },
+    "frequencies": {
+      "max": 15,
+      "ids": [],
+      "include_formats": ["frequency"],
+      "include_keywords": ["frequency", "frequencies", "hz", "solfeggio", "binaural"]
+    },
+    "meditations": {
+      "max": 12,
+      "ids": [],
+      "include_formats": ["meditation"],
+      "include_keywords": ["meditation", "affirmation", "breathwork", "calm", "focus"]
+    },
+    "audiobooks": {
+      "max": 8,
+      "ids": [],
+      "include_formats": ["audiobook"],
+      "include_keywords": ["audiobook", "listen", "narration", "voice"]
+    },
+    "teachings": {
+      "max": 15,
+      "ids": [],
+      "include_formats": ["teaching", "essay", "other"],
+      "include_keywords": ["discipline", "direction", "purpose", "clarity", "framework"],
+      "exclude_keywords": ["medical", "urgent care", "bellaire", "insurance"]
+    }
+  }
+}

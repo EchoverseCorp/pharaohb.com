@@ -10,8 +10,8 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, subtitle, orientationText, className }: PageHeaderProps) {
   return (
-    <div className={cn("pt-24 pb-12 md:pt-32 md:pb-16 lg:pt-40 lg:pb-20", className)}>
-      <div className="container mx-auto px-6">
+    <div className={cn("pt-28 pb-10 md:pt-32 md:pb-14 lg:pt-36 lg:pb-16", className)}>
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           {/* Decorative ornament */}
           <div className="mb-6 flex justify-center">

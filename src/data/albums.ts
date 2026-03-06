@@ -82,6 +82,23 @@ export const albums: Album[] = [
     spotifyEmbedId: '3184qyYgGnm8yBs6asYF5d',
     youtubeVideoId: '6-yEttH5hiA',
   },
+  {
+    slug: 'sacred-geometry-soundscapes',
+    title: 'Sacred Geometry Soundscapes',
+    description: 'Sound patterns aligned with the mathematical harmonies found in nature. Frequencies that mirror the golden ratio and Fibonacci sequences.',
+    image: 'https://i.ytimg.com/vi/XGq0-MGq2O0/maxresdefault.jpg',
+    tracks: [
+      'Phi Sequence',
+      'Metatron\'s Cube',
+      'Flower of Life',
+      'Vesica Piscis',
+      'Seed of Creation',
+      'Infinite Spiral'
+    ],
+    year: '2024',
+    spotifyEmbedId: '0G8WL3Q4cIEwzNgQl5Jw2f',
+    youtubeVideoId: 'XGq0-MGq2O0',
+  }
 ];
 
 export const getAlbumBySlug = (slug: string): Album | undefined => {

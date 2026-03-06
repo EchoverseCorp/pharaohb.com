@@ -1,109 +1,103 @@
 import { Link } from 'react-router-dom';
-import { Play } from 'lucide-react';
-import { transmissions } from '@/data/transmissions';
+import { books } from '@/data/books';
+import { writings } from '@/data/writings';
+import { blogPosts } from '@/data/blogPosts';
+import { Button } from '@/components/ui/button';
 
-// Helper to find video by YouTube ID
-const findVideoById = (youtubeId: string) => 
-  transmissions.find(t => t.href.includes(youtubeId));
-
-// Left column - 2 large stacked audiobooks (TOP to BOTTOM order)
-const leftColumnVideos = [
-  findVideoById('Nd_9Nuv39Zw'), // The Master Key System - TOP
-  findVideoById('msA-q_PwIz8'), // The Art of Not Thinking Yourself to Death - BOTTOM
-].filter(Boolean);
-
-// Right column - 3 smaller stacked audiobooks (TOP to BOTTOM order)
-const rightColumnVideos = [
-  findVideoById('I-xKF7PyoVM'), // You Are Not Your Addiction
-  findVideoById('HOfjZTY0Q4s'), // The Light Within
-  findVideoById('ejbByodADwA'), // The Kybalion
-].filter(Boolean);
-
-interface VideoCardProps {
-  video: typeof transmissions[0];
-}
-
-function VideoCard({ video }: VideoCardProps) {
-  return (
-    <a
-      href={video.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group relative overflow-hidden bg-card border border-border hover:border-primary/50 transition-all duration-500"
-    >
-      <div className="aspect-video overflow-hidden">
-        <img
-          src={video.thumbnail}
-          alt={video.title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-        
-        {/* Play Button Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center transform scale-90 group-hover:scale-100 transition-transform duration-300">
-            <Play className="w-7 h-7 text-primary-foreground ml-1" fill="currentColor" />
-          </div>
-        </div>
-
-        {/* Duration Badge */}
-        <div className="absolute top-3 right-3 px-2 py-1 bg-background/90 text-foreground text-xs font-medium tracking-wide">
-          {video.duration}
-        </div>
-      </div>
-      
-      {/* Video Info */}
-      <div className="absolute bottom-0 left-0 right-0 p-4">
-        <span className="font-cinzel text-xs text-primary/70 uppercase tracking-widest mb-1 block">
-          {video.category}
-        </span>
-        <h3 className="font-cinzel text-sm lg:text-base text-foreground group-hover:text-gold-gradient transition-colors line-clamp-2">
-          {video.title}
-        </h3>
-      </div>
-    </a>
-  );
-}
+const mostUsefulFirst = [
+  {
+    need: 'Think Clearly',
+    title: 'Decision Clarity Path',
+    description: 'Start with core essays and tools that reduce noise and improve decisions.',
+    link: '/think-clearly',
+  },
+  {
+    need: 'Build Discipline',
+    title: 'Discipline and Execution Path',
+    description: 'Build consistency with practical frameworks, routines, and accountability.',
+    link: '/build-discipline',
+  },
+  {
+    need: 'Find Direction',
+    title: 'Direction and Purpose Path',
+    description: 'Move from confusion to momentum with guided writing and next-step prompts.',
+    link: '/find-direction',
+  },
+  {
+    need: 'Books and Tools',
+    title: books[0].title,
+    description: 'Core long-form work for personal responsibility, focus, and progress.',
+    link: `/library/${books[0].slug}`,
+  },
+  {
+    need: 'Creative Expression',
+    title: writings[0].title,
+    description: 'Poetry and reflective writing for perspective, emotional clarity, and fuel.',
+    link: `/writings/${writings[0].slug}`,
+  },
+  {
+    need: 'Resources',
+    title: 'Curated Knowledge Library',
+    description: 'Recommended books and references to support long-term growth.',
+    link: '/resources',
+  },
+];
 
 export function RecentWorksSection() {
+  const latest = [...blogPosts]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 3);
+
   return (
-    <section className="py-12 sm:py-16 md:py-24">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-8 sm:mb-12">
-          <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl text-gold-gradient mb-3 sm:mb-4">
-            Recent Works
+    <section className="py-16 md:py-24 border-y border-primary/10 bg-gradient-to-b from-transparent via-muted/5 to-transparent">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="font-cinzel text-3xl md:text-4xl text-gold-gradient mb-4">
+            Most Useful First
           </h2>
-          <p className="font-cormorant text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
-            Explorations in word, image, and form—each piece a doorway into deeper territories.
+          <p className="font-cormorant text-xl text-muted-foreground max-w-2xl mx-auto">
+            Start with curated paths and foundational pieces before exploring everything else.
           </p>
         </div>
 
-        {/* 2-Column Grid: Left (2 large 16:9) + Right (3 smaller 16:9) */}
-        <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-3 sm:gap-4 max-w-6xl mx-auto items-stretch">
-          {/* Left Column - 2 large stacked audiobooks */}
-          <div className="flex flex-col gap-3 sm:gap-4 lg:gap-0 lg:justify-between lg:h-full">
-            {leftColumnVideos.map((video) => (
-              video && <VideoCard key={video.id} video={video} />
-            ))}
-          </div>
-
-          {/* Right Column - 3 stacked audiobooks (flush top + bottom aligned with left column on lg+) */}
-          <div className="flex flex-col gap-3 sm:gap-4 lg:gap-0 lg:justify-between lg:h-full">
-            {rightColumnVideos.map((video) => (
-              video && <VideoCard key={video.id} video={video} />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {mostUsefulFirst.map((work, index) => (
+            <Link
+              key={index}
+              to={work.link}
+              className="group bg-card border border-border hover:border-primary/50 transition-all duration-300 p-6"
+            >
+              <span className="font-cinzel text-[11px] text-primary/80 uppercase tracking-widest mb-3 block">
+                {work.need}
+              </span>
+              <h3 className="font-cinzel text-xl text-foreground group-hover:text-gold-gradient transition-colors mb-3">
+                {work.title}
+              </h3>
+              <p className="font-cormorant text-base text-muted-foreground leading-relaxed">{work.description}</p>
+            </Link>
+          ))}
         </div>
 
-        {/* View All Link */}
-        <div className="text-center mt-10">
-          <Link
-            to="/transmissions"
-            className="inline-flex items-center gap-2 font-cinzel text-sm tracking-widest text-primary hover:opacity-70 transition-opacity"
-          >
-            View All Transmissions
-            <span>→</span>
-          </Link>
+        <div className="mt-12 max-w-6xl mx-auto border border-primary/20 bg-card/60 p-6 md:p-8">
+          <div className="flex items-center justify-between gap-4 flex-wrap mb-6">
+            <h3 className="font-cinzel text-2xl text-foreground">Latest Notes</h3>
+            <Button asChild variant="outline" className="font-cinzel text-xs tracking-wider border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground">
+              <Link to="/articles">View All Articles</Link>
+            </Button>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {latest.map((post) => (
+              <Link
+                key={post.slug}
+                to={`/articles/${post.slug}`}
+                className="border border-border hover:border-primary/45 transition-colors p-4"
+              >
+                <p className="font-cinzel text-[11px] tracking-wider text-primary/80 mb-2">{post.date}</p>
+                <h4 className="font-cinzel text-lg text-foreground mb-2 line-clamp-2">{post.title}</h4>
+                <p className="font-cormorant text-base text-muted-foreground line-clamp-3">{post.excerpt}</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>
