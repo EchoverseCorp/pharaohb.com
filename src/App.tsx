@@ -9,7 +9,6 @@ import { RouteMeta } from "./components/RouteMeta";
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Start = lazy(() => import("./pages/Start"));
-const Books = lazy(() => import("./pages/Books"));
 const Canon = lazy(() => import("./pages/Canon"));
 const CanonDetail = lazy(() => import("./pages/CanonDetail"));
 const Art = lazy(() => import("./pages/Art"));
@@ -55,7 +54,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/articles" element={<News />} />
             <Route path="/articles/:slug" element={<NewsArticle />} />
-            <Route path="/books" element={<Books />} />
+            <Route path="/books" element={<Navigate to="/library" replace />} />
             <Route path="/library" element={<Canon />} />
             <Route path="/library/:slug" element={<CanonDetail />} />
             <Route path="/canon" element={<Navigate to="/library" replace />} />
