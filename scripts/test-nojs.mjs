@@ -6,10 +6,10 @@ const DIST = path.join(ROOT, 'dist');
 
 const CHECKS = [
   { route: '/', text: 'What You Will Find Here' },
-  { route: '/articles', text: 'Problem-first essays on overthinking, discipline, direction, and creative expression written in plain language.' },
-  { route: '/library', text: 'Core books and long-form frameworks' },
-  { route: '/creative', text: 'Expression across words, sound, and image' },
-  { route: '/resources', text: 'Curated knowledge archive' },
+  { route: '/articles', text: 'Articles are where ideas are worked through in plain language.' },
+  { route: '/library', text: 'Library Discovery Paths' },
+  { route: '/creative', text: 'Creative and Media Essays' },
+  { route: '/resources', text: 'Tools and Recommendations' },
 ];
 
 function routeToFile(route) {
@@ -28,6 +28,7 @@ function main() {
       throw new Error(`JS-disabled visibility failed for ${check.route}: missing "${check.text}"`);
     }
   }
+
   // eslint-disable-next-line no-console
   console.log('js-disabled rendering checks passed');
 }
