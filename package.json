@@ -7,6 +7,7 @@
     "dev": "vite",
     "build:client": "vite build",
     "build": "npm run build:client && npm run prerender",
+    "preprerender": "npx playwright install chromium",
     "prerender": "node scripts/prerender-routes.mjs",
     "build:ssg": "npm run build",
     "render:verify": "node scripts/verify-rendering.mjs",
