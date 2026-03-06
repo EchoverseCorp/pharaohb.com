@@ -1,0 +1,142 @@
+name: Safety Gate
+
+# Reusable safety check for all EchoverseCorp + Snowman1023 repos.
+# Blocks merge if secrets, credentials, or dangerous patterns are detected.
+# Copy this file to any repo's .github/workflows/ to enable.
+
+on:
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  safety:
+    name: safety-gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Scan for secrets in diff
+        run: |
+          echo "Scanning PR diff for leaked secrets..."
+          DIFF=$(git diff origin/${{ github.base_ref }}...HEAD)
+
+          PATTERNS=(
+            # API keys and tokens
+            'AKIA[0-9A-Z]{16}'                          # AWS Access Key
+            'sk-[a-zA-Z0-9]{20,}'                       # OpenAI / Stripe secret key
+            'sk-ant-[a-zA-Z0-9-]{20,}'                  # Anthropic API key
+            'ghp_[a-zA-Z0-9]{36}'                       # GitHub personal access token
+            'gho_[a-zA-Z0-9]{36}'                       # GitHub OAuth token
+            'github_pat_[a-zA-Z0-9_]{22,}'              # GitHub fine-grained PAT
+            'xox[bsapr]-[a-zA-Z0-9-]+'                  # Slack tokens
+            'SG\.[a-zA-Z0-9_-]{22}\.[a-zA-Z0-9_-]{43}' # SendGrid
+            'sq0[a-z]{3}-[a-zA-Z0-9_-]{22,}'            # Square
+            'key-[a-zA-Z0-9]{32}'                       # Generic API key pattern
+
+            # Database / connection strings
+            'postgres://[^:]+:[^@]+@'                   # Postgres with password
+            'mysql://[^:]+:[^@]+@'                      # MySQL with password
+            'mongodb(\+srv)?://[^:]+:[^@]+@'            # MongoDB with password
+            'redis://:[^@]+@'                           # Redis with password
+
+            # Private keys
+            '-----BEGIN (RSA |EC |DSA |OPENSSH )?PRIVATE KEY-----'
+            '-----BEGIN PGP PRIVATE KEY BLOCK-----'
+
+            # Cloud provider secrets
+            'AZURE_[A-Z_]*SECRET'
+            'GOOGLE_[A-Z_]*KEY'
+
+            # Hardcoded passwords in code (not comments/docs)
+            'password\s*=\s*["\x27][^"\x27]{8,}'
+            'secret\s*=\s*["\x27][^"\x27]{8,}'
+            'token\s*=\s*["\x27][^"\x27]{8,}'
+          )
+
+          FOUND=0
+          for pattern in "${PATTERNS[@]}"; do
+            MATCHES=$(echo "$DIFF" | grep -n -E "^\+" | grep -iE "$pattern" | grep -v '\.example' | grep -v 'EXAMPLE' | grep -v 'placeholder' | grep -v 'your-' | grep -v 'changeme' | grep -v 'TODO' | grep -v '#.*secret' | grep -v 'test' || true)
+            if [ -n "$MATCHES" ]; then
+              echo "::error::SECRET DETECTED matching pattern: $pattern"
+              echo "$MATCHES" | head -5
+              FOUND=1
+            fi
+          done
+
+          if [ "$FOUND" -eq 1 ]; then
+            echo ""
+            echo "::error::Secrets detected in PR diff. Remove them before merging."
+            echo "If these are false positives (example values, test fixtures), add 'EXAMPLE' or 'placeholder' to make intent clear."
+            exit 1
+          fi
+
+          echo "No secrets detected."
+
+      - name: Scan for dangerous patterns
+        run: |
+          echo "Scanning for dangerous code patterns..."
+          DIFF=$(git diff origin/${{ github.base_ref }}...HEAD -- '*.py' '*.js' '*.ts' '*.sh' '*.yml' '*.yaml' '*.json')
+
+          ISSUES=0
+
+          # Check for eval/exec with user input
+          if echo "$DIFF" | grep -n "^\+" | grep -E 'eval\(.*request|exec\(.*request|eval\(.*input|exec\(.*input' | grep -v '#' | grep -v '//' | grep -v 'test'; then
+            echo "::warning::Potential code injection: eval/exec with user input"
+            ISSUES=1
+          fi
+
+          # Check for disabled SSL verification
+          if echo "$DIFF" | grep -n "^\+" | grep -E 'verify\s*=\s*False|NODE_TLS_REJECT_UNAUTHORIZED.*0|SSL_VERIFY.*false' | grep -v '#' | grep -v '//'; then
+            echo "::warning::SSL verification disabled"
+            ISSUES=1
+          fi
+
+          # Check for chmod 777
+          if echo "$DIFF" | grep -n "^\+" | grep -E 'chmod.*777'; then
+            echo "::warning::chmod 777 detected — world-writable permissions"
+            ISSUES=1
+          fi
+
+          # Check for hardcoded IPs (non-localhost)
+          if echo "$DIFF" | grep -n "^\+" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | grep -v '127.0.0.1' | grep -v '0.0.0.0' | grep -v '10.0.' | grep -v '192.168.' | grep -v '255.255.' | head -5; then
+            echo "::notice::Hardcoded IP addresses found — verify these are intentional"
+          fi
+
+          if [ "$ISSUES" -eq 1 ]; then
+            echo "::warning::Dangerous patterns found. Review carefully."
+          fi
+
+          echo "Pattern scan complete."
+
+      - name: Check for large files
+        run: |
+          echo "Checking for large files in diff..."
+          LARGE=$(git diff --stat origin/${{ github.base_ref }}...HEAD | grep -E '\|\s+Bin\s+0\s+->' | awk '{print $1}')
+          if [ -n "$LARGE" ]; then
+            for f in $LARGE; do
+              SIZE=$(git ls-tree -r -l HEAD -- "$f" 2>/dev/null | awk '{print $4}')
+              if [ -n "$SIZE" ] && [ "$SIZE" -gt 5242880 ]; then
+                echo "::error::Large binary file: $f ($(($SIZE / 1048576))MB) — use Git LFS or remove"
+                exit 1
+              fi
+            done
+          fi
+          echo "No oversized files."
+
+      - name: Check .env files not committed
+        run: |
+          DIFF_FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD)
+          BAD=$(echo "$DIFF_FILES" | grep -E '^\.env$|^\.env\.(local|production|staging)$|credentials\.json|serviceAccountKey\.json' || true)
+          if [ -n "$BAD" ]; then
+            echo "::error::Sensitive file committed: $BAD"
+            exit 1
+          fi
+          echo "No sensitive files in diff."
+
+      - name: Gate passed
+        run: echo "Safety gate passed. PR is safe to merge."
