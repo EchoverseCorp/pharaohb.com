@@ -9,6 +9,7 @@
     "build:dev": "vite build --mode development",
     "content:build": "node scripts/build-content-pack.mjs",
     "content:top100": "node scripts/build-top100.mjs",
+    "sitemap:build": "node scripts/build-sitemap.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
