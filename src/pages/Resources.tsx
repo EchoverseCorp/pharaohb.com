@@ -57,6 +57,9 @@ const Resources = () => {
       />
 
       <SectionContainer>
+        <p className="font-cormorant text-lg md:text-xl text-muted-foreground text-center mb-8 max-w-3xl mx-auto">
+          Resources is a curated shelf of books, tools, and references chosen for usefulness rather than novelty.
+        </p>
         <div className="max-w-6xl mx-auto border border-primary/20 bg-card p-6 mb-8">
           <h2 className="font-cinzel text-xl text-foreground mb-2">Knowledge Map</h2>
           <p className="font-cormorant text-muted-foreground mb-5">

@@ -44,6 +44,9 @@ const News = () => {
 
       <SectionContainer>
         <div className="max-w-5xl mx-auto">
+          <p className="font-cormorant text-lg md:text-xl text-muted-foreground text-center mb-10 max-w-3xl mx-auto">
+            Articles are where ideas are worked through in plain language. Some are practical, some reflective, but each is written to help you understand something more clearly.
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 mb-12">
             <Link to="/think-clearly" className="border border-primary/30 bg-card p-4 text-center hover:border-primary transition-colors">
               <p className="font-cinzel text-[10px] tracking-[0.16em] uppercase text-primary/70">Problem</p>

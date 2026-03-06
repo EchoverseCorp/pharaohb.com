@@ -51,8 +51,7 @@ const Canon = () => {
       <SectionContainer>
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="font-cormorant text-xl text-muted-foreground">
-            A structured library of the core ideas behind Pharaoh B's work:
-            clarity, responsibility, and practical transformation.
+            The Library gathers the deeper foundations of the project: long-form essays, study guides, and texts worth revisiting over time.
           </p>
         </div>
 

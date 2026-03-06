@@ -10,19 +10,12 @@ export function FinalCtaSection() {
             Keep Exploring at Your Pace
           </h2>
           <p className="font-cormorant text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Use search when you know what you need, or use Start Here for a guided path.
+            Start with an essay, a guide, or a creative piece, and follow what stays with you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               asChild
               className="font-cinzel text-xs tracking-wider bg-primary text-primary-foreground hover:bg-primary/90"
-            >
-              <Link to="/search">Search the Library</Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              className="font-cinzel text-xs tracking-wider border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground"
             >
               <Link to="/start">Start Here</Link>
             </Button>
@@ -31,7 +24,7 @@ export function FinalCtaSection() {
               variant="outline"
               className="font-cinzel text-xs tracking-wider border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground"
             >
-              <Link to="/creative">Explore Creative Work</Link>
+              <Link to="/library">Explore the Library</Link>
             </Button>
           </div>
         </div>

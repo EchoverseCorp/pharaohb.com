@@ -41,6 +41,9 @@ const Creative = () => {
 
       <SectionContainer>
         <div className="max-w-6xl mx-auto">
+          <p className="font-cormorant text-lg md:text-xl text-muted-foreground text-center mb-10 max-w-3xl mx-auto">
+            Creative work lives here because not every truth arrives as an argument. Some come through image, rhythm, memory, and tone.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
             {lanes.map((lane) => (
               <Link key={lane.title} to={lane.href} className="border border-border bg-card p-6 hover:border-primary/50 transition-colors">

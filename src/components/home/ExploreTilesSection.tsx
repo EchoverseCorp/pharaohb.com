@@ -4,25 +4,25 @@ import { ArrowRight } from 'lucide-react';
 const exploreTiles = [
   {
     title: 'Articles',
-    description: 'Problem-first essays and practical frameworks for real life.',
+    description: 'Focused essays that make useful ideas easier to understand and apply.',
     image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1200&q=80',
     link: '/articles'
   },
   {
     title: 'Library',
-    description: 'Core books, long-form writing, and structured idea series.',
+    description: 'Long-form writing, study guides, and foundational texts gathered in one place.',
     image: 'https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=1200&q=80',
     link: '/library'
   },
   {
     title: 'Creative',
-    description: 'Poetry, music, frequencies, meditations, and visual work.',
+    description: 'Poetry, music, reflections, and visual work from the more expressive side of the project.',
     image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200&q=80',
     link: '/creative'
   },
   {
     title: 'Resources',
-    description: 'Curated books, tools, and references',
+    description: 'Curated books, tools, podcasts, and references for deeper study.',
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80',
     link: '/resources'
   }
@@ -37,7 +37,7 @@ export function ExploreTilesSection() {
             Explore by Format
           </h2>
           <p className="font-cormorant text-xl text-muted-foreground max-w-2xl mx-auto">
-            Browse by how you want to learn right now.
+            Browse by format and follow what helps most.
           </p>
         </div>
 

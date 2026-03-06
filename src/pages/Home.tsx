@@ -4,8 +4,6 @@ import { WhatYoullFindSection } from '@/components/home/WhatYoullFindSection';
 import { HomeFaqSection } from '@/components/home/HomeFaqSection';
 import { ValueProofSection } from '@/components/home/ValueProofSection';
 import { ExploreTilesSection } from '@/components/home/ExploreTilesSection';
-import { RecentWorksSection } from '@/components/home/RecentWorksSection';
-import { AvailableNowSection } from '@/components/home/AvailableNowSection';
 import { FinalCtaSection } from '@/components/home/FinalCtaSection';
 
 const Home = () => {
@@ -16,8 +14,6 @@ const Home = () => {
       <ValueProofSection />
       <HomeFaqSection />
       <ExploreTilesSection />
-      <RecentWorksSection />
-      <AvailableNowSection />
       <FinalCtaSection />
     </PageLayout>
   );
