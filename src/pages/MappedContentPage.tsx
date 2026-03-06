@@ -57,8 +57,58 @@ function sectionVoice(section: First100SectionKey): { lens: string; focus: strin
   };
 }
 
+function titleSignals(title: string) {
+  const t = title.toLowerCase();
+  return {
+    overthinking: /\boverthinking|rumination|noisy mind|overanalyzing|indecision|cognitive bias\b/.test(t),
+    decisions: /\bdecision|judgment|thinking clearly|mental model\b/.test(t),
+    discipline: /\bdiscipline|habit|procrastinating|consistency|routine|productive|momentum\b/.test(t),
+    direction: /\bdirection|purpose|meaning|life path|lost in life|self-mastery\b/.test(t),
+    creativity: /\bcreative|creativity|artist|writing|art\b/.test(t),
+    books: /\bbook|philosophy|stoic|guide|study\b/.test(t),
+  };
+}
+
+function generateExamples(title: string, section: First100SectionKey): string[] {
+  const s = titleSignals(title);
+  if (section === 'think-clearly' || s.overthinking || s.decisions) {
+    return [
+      'Before responding to a difficult message, write two possible outcomes and choose the one aligned with your long-term standard.',
+      'When stuck between options, force a 10-minute deadline and commit to the best available evidence, not perfect certainty.',
+      'Use a one-page decision log so you can learn from outcomes instead of replaying anxiety loops.',
+    ];
+  }
+  if (section === 'build-discipline' || s.discipline) {
+    return [
+      'Reduce your morning routine to a non-negotiable 20-minute baseline that you can keep every day.',
+      'Use environment design: remove one distraction trigger tonight, then track the next 7 days.',
+      'Pair one difficult behavior with a fixed cue (same time, same place) until it becomes automatic.',
+    ];
+  }
+  if (section === 'find-direction' || s.direction) {
+    return [
+      'List three projects, then keep only the one that serves your values and your next 12 months.',
+      'Replace “what should I do with my life?” with “what problem can I solve repeatedly this quarter?”',
+      'Run a weekly direction review: what created energy, what drained energy, what to keep or cut.',
+    ];
+  }
+  if (section === 'creative-expression' || section === 'creative-media' || s.creativity) {
+    return [
+      'Create a daily shipping window: 30 minutes minimum, output first, editing second.',
+      'Treat creative blocks as unclear constraints; define format, length, and deadline before starting.',
+      'Publish drafts in cycles and let feedback improve clarity over time.',
+    ];
+  }
+  return [
+    'Convert one insight from this page into a concrete action today.',
+    'Keep your implementation simple enough to repeat for seven days.',
+    'Measure behavior change, not just understanding.',
+  ];
+}
+
 function buildDeepContent(title: string, section: First100SectionKey) {
   const voice = sectionVoice(section);
+  const examples = generateExamples(title, section);
   return {
     intro: [
       `${title} is not just a concept to understand, it is a practical skill you can train. Most people stay stuck because they consume ideas without building a repeatable way to apply them.`,
@@ -97,6 +147,7 @@ function buildDeepContent(title: string, section: First100SectionKey) {
       'What am I avoiding because I am waiting to feel ready?',
       'What would consistent execution look like at 80% quality this week?',
     ],
+    examples,
     close: `Use this page as a working document, not a one-time read. Return to it after each weekly cycle and tighten your process. Progress comes from repetition with awareness, not from intensity without structure.`,
     needLabel: voice.defaultNeed,
   };
@@ -172,6 +223,15 @@ export default function MappedContentPage({ section }: MappedContentPageProps) {
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
+          </section>
+
+          <section className="border border-border bg-card p-6 md:p-8">
+            <h3 className="font-cinzel text-xl text-foreground mb-3">Real-World Examples</h3>
+            <ul className="space-y-2 font-cormorant text-muted-foreground">
+              {content.examples.map((example) => (
+                <li key={example}>- {example}</li>
+              ))}
+            </ul>
           </section>
 
           <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
