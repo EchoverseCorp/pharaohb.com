@@ -3,32 +3,32 @@ import { JsonLd } from '@/components/shared/JsonLd';
 
 const faqs = [
   {
-    question: 'How can I stop overthinking and make better decisions?',
+    question: 'How do I start if I tend to overthink everything?',
     answer:
-      'Start in Think Clearly. You will find practical frameworks and articles that help you move from mental loops to clear next steps.',
+      'Begin with Think Clearly. It gathers essays and frameworks that help you reduce mental noise, see the real problem, and make calmer decisions.',
     link: '/think-clearly',
     linkLabel: 'Open Think Clearly',
   },
   {
-    question: 'What should I read first if I need more discipline?',
+    question: 'What should I read first if I want more discipline?',
     answer:
-      'Use Build Discipline for structured routines, execution systems, and writing focused on consistency and follow-through.',
+      'Start with Build Discipline. The focus there is less on motivation and more on systems, routines, and principles that make consistency possible.',
     link: '/build-discipline',
     linkLabel: 'Open Build Discipline',
   },
   {
-    question: 'Where should I start if I feel stuck or directionless?',
+    question: 'Where should I begin if I feel directionless?',
     answer:
-      'Start Here gives you a guided sequence and the Find Direction path for turning reflection into momentum.',
-    link: '/start',
-    linkLabel: 'Open Start Here',
+      'Visit Find Direction. That path is built around reflection, clarity, and choosing what is worth committing to.',
+    link: '/find-direction',
+    linkLabel: 'Open Find Direction',
   },
   {
-    question: 'Does this site have books, music, poetry, and resources in one place?',
+    question: 'What kind of work lives here besides articles?',
     answer:
-      'Yes. The site is organized as a library: articles, books, creative work, and curated tools with clear discovery paths.',
-    link: '/search',
-    linkLabel: 'Search the Library',
+      'Alongside essays, you will find study guides, curated resources, and creative work including poetry, music, and visual pieces.',
+    link: '/start',
+    linkLabel: 'Open Start Here',
   },
 ];
 
@@ -53,7 +53,7 @@ export function HomeFaqSection() {
         <div className="max-w-4xl mx-auto text-center mb-10">
           <h2 className="font-cinzel text-3xl md:text-4xl text-gold-gradient mb-3">Frequently Asked Questions</h2>
           <p className="font-cormorant text-lg md:text-xl text-muted-foreground">
-            Quick answers for first-time visitors so you can find value fast.
+            A few quick answers to help you find a good place to begin.
           </p>
         </div>
 

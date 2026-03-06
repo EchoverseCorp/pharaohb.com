@@ -10,7 +10,7 @@ type MetaConfig = {
 const SITE_NAME = 'Pharaoh B';
 const DEFAULT_TITLE = 'Pharaoh B | Think Clearly. Build a Meaningful Life.';
 const DEFAULT_DESCRIPTION =
-  'Practical books, articles, writing, music, and tools to help you stop overthinking, build discipline, find direction, and create meaningful progress.';
+  'A discoverable library of articles, study guides, books, and creative work to help you stop overthinking, build discipline, and find direction.';
 
 const metaByRoute: Array<{ test: (p: string) => boolean; meta: MetaConfig }> = [
   {
@@ -24,7 +24,7 @@ const metaByRoute: Array<{ test: (p: string) => boolean; meta: MetaConfig }> = [
     test: (p) => p.startsWith('/start'),
     meta: {
       title: 'Start Here | Pharaoh B',
-      description: 'New here? Start with a clear plan for focus, discipline, confidence, and purpose.',
+      description: 'Start with your need: overthinking, discipline, direction, creative expression, or books and tools.',
     },
   },
   {
@@ -38,7 +38,7 @@ const metaByRoute: Array<{ test: (p: string) => boolean; meta: MetaConfig }> = [
     test: (p) => p.startsWith('/articles'),
     meta: {
       title: 'Articles | Pharaoh B',
-      description: 'Problem-first articles on overthinking, discipline, direction, creativity, and practical personal growth.',
+      description: 'Problem-first essays on overthinking, discipline, direction, and creative expression written in plain language.',
     },
   },
   {
@@ -73,7 +73,7 @@ const metaByRoute: Array<{ test: (p: string) => boolean; meta: MetaConfig }> = [
     test: (p) => p.startsWith('/library'),
     meta: {
       title: 'Library | Pharaoh B',
-      description: 'Library of core books and long-form frameworks for clarity, decision-making, and execution.',
+      description: 'A curated library of long-form writing, study guides, and foundational texts worth revisiting.',
     },
   },
   {
@@ -87,14 +87,14 @@ const metaByRoute: Array<{ test: (p: string) => boolean; meta: MetaConfig }> = [
     test: (p) => p.startsWith('/creative'),
     meta: {
       title: 'Creative | Pharaoh B',
-      description: 'Explore poetry, music, art, and media in one creative discovery hub.',
+      description: 'Poetry, music, frequencies, meditations, and visual work for creative expression and reflection.',
     },
   },
   {
     test: (p) => p.startsWith('/resources'),
     meta: {
       title: 'Resources | Pharaoh B',
-      description: 'Curated books, references, thinking tools, and practical resources for creators and builders.',
+      description: 'Curated books, tools, references, and partner resources for deeper study and practical growth.',
     },
   },
   {
@@ -136,7 +136,7 @@ const metaByRoute: Array<{ test: (p: string) => boolean; meta: MetaConfig }> = [
     test: (p) => p.startsWith('/study-guides'),
     meta: {
       title: 'Study Guides | Pharaoh B',
-      description: 'Study guides with summaries, key ideas, exercises, and practical implementation notes.',
+      description: 'Study guides with summary, key ideas, exercises, lecture links, and affiliate resources.',
     },
   },
   {

@@ -264,19 +264,28 @@ export default function MappedContentPage({ section }: MappedContentPageProps) {
 
           {studyGuideMode && (
             <section className="border border-primary/20 bg-card p-6 md:p-8">
-              <h2 className="font-cinzel text-2xl text-foreground mb-4">{studyTopic} - Study Guide Structure</h2>
-              <div className="space-y-4 font-cormorant text-muted-foreground">
-                <p>
-                  Use this guide format for <span className="text-foreground">{studyTopic}</span>: summary, key ideas,
-                  exercises, and lecture notes.
-                </p>
-                <ul className="space-y-2">
-                  <li>- Summary: capture the core thesis in one paragraph.</li>
-                  <li>- Key Ideas: list 5-10 principles that can be applied immediately.</li>
-                  <li>- Exercises: define 3 practices for daily implementation.</li>
-                  <li>- YouTube Lecture: attach your preferred lecture breakdown.</li>
-                  <li>- Affiliate Link: include the primary book purchase link.</li>
-                </ul>
+              <h2 className="font-cinzel text-2xl text-foreground mb-4">{studyTopic} - Study Guide Template</h2>
+              <div className="space-y-5 font-cormorant text-muted-foreground">
+                <div>
+                  <h3 className="font-cinzel text-lg text-foreground mb-2">Summary</h3>
+                  <p>Capture the book's central argument in one clear paragraph and explain why it still matters today.</p>
+                </div>
+                <div>
+                  <h3 className="font-cinzel text-lg text-foreground mb-2">Key Ideas</h3>
+                  <p>List 5 to 10 core principles with one sentence each on practical application.</p>
+                </div>
+                <div>
+                  <h3 className="font-cinzel text-lg text-foreground mb-2">Exercises</h3>
+                  <p>Define three actions the reader can complete this week to apply the material directly.</p>
+                </div>
+                <div>
+                  <h3 className="font-cinzel text-lg text-foreground mb-2">Lecture</h3>
+                  <p>Link one lecture or breakdown that helps readers reinforce understanding in audio/video format.</p>
+                </div>
+                <div>
+                  <h3 className="font-cinzel text-lg text-foreground mb-2">Affiliate</h3>
+                  <p>Include the primary purchase link as a convenience for readers who want the original text.</p>
+                </div>
               </div>
             </section>
           )}

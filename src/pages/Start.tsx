@@ -27,13 +27,16 @@ const Start = () => {
       <PageHeader
         title="Start Here"
         subtitle="Find value in under 10 minutes"
-        orientationText="Pick the problem you want to solve first. Then follow the path."
+        orientationText="Choose one path, read one useful piece, and apply it this week."
       />
 
       <SectionContainer>
         <div className="max-w-6xl mx-auto space-y-14">
           <section>
-            <h2 className="font-cinzel text-2xl text-gold-gradient text-center mb-6">Start By Need</h2>
+            <h2 className="font-cinzel text-2xl text-gold-gradient text-center mb-3">Featured Paths</h2>
+            <p className="font-cormorant text-lg text-muted-foreground text-center mb-6 max-w-3xl mx-auto">
+              Start with the question you are carrying, then follow one path deeply before switching.
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
               {pillars.map((pillar) => (
                 <Link
@@ -54,19 +57,19 @@ const Start = () => {
             <ol className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <li className="border border-border p-4">
                 <p className="font-cinzel text-[10px] tracking-[0.18em] uppercase text-primary/70 mb-2">Step 1</p>
-                <p className="font-cormorant text-foreground">Choose one need path.</p>
+                <p className="font-cormorant text-foreground">Choose one path that matches your current need.</p>
               </li>
               <li className="border border-border p-4">
                 <p className="font-cinzel text-[10px] tracking-[0.18em] uppercase text-primary/70 mb-2">Step 2</p>
-                <p className="font-cormorant text-foreground">Read one article and take notes.</p>
+                <p className="font-cormorant text-foreground">Read one article and write down what you will apply.</p>
               </li>
               <li className="border border-border p-4">
                 <p className="font-cinzel text-[10px] tracking-[0.18em] uppercase text-primary/70 mb-2">Step 3</p>
-                <p className="font-cormorant text-foreground">Open one book or long-form guide.</p>
+                <p className="font-cormorant text-foreground">Open one book or study guide for deeper context.</p>
               </li>
               <li className="border border-border p-4">
                 <p className="font-cinzel text-[10px] tracking-[0.18em] uppercase text-primary/70 mb-2">Step 4</p>
-                <p className="font-cormorant text-foreground">Apply for 7 days, then continue.</p>
+                <p className="font-cormorant text-foreground">Apply for 7 days, review, then continue.</p>
               </li>
             </ol>
           </section>

@@ -4,31 +4,31 @@ import { Button } from '@/components/ui/button';
 const pillars = [
   {
     title: 'Overthinking',
-    description: 'Decision frameworks and mental models for faster, cleaner choices.',
+    description: 'Understand why the mind loops, and learn how to return to clearer thinking.',
     link: '/think-clearly',
     cta: 'Open Think Clearly',
   },
   {
     title: 'Discipline',
-    description: 'Routines and systems to build consistency and follow-through.',
+    description: 'Build steadier habits, better systems, and the ability to follow through.',
     link: '/build-discipline',
     cta: 'Open Build Discipline',
   },
   {
     title: 'Direction',
-    description: 'Writing and tools to move from uncertainty to meaningful action.',
+    description: 'Find better questions for where you are, what matters, and where to go next.',
     link: '/find-direction',
     cta: 'Open Find Direction',
   },
   {
     title: 'Creative Expression',
-    description: 'Poetry, music, frequencies, and media for reflection and momentum.',
+    description: 'Poetry, music, reflections, and creative work that explore the same questions from another angle.',
     link: '/creative-expression',
     cta: 'Open Creative Expression',
   },
   {
-    title: 'Books and Tools',
-    description: 'Curated books, resources, and references to keep learning practical.',
+    title: 'Books & Tools',
+    description: 'Curated books, tools, and references to support deeper study and practical growth.',
     link: '/books-and-tools',
     cta: 'Open Books and Tools',
   },
@@ -43,7 +43,7 @@ export function ValueProofSection() {
             Start With Your Need
           </h2>
           <p className="font-cormorant text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Pick one path and get immediate value, then follow related writing and resources.
+            Choose the path that matches what you need most right now, then follow the related writing, guides, and resources.
           </p>
         </div>
 

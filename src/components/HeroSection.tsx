@@ -35,13 +35,12 @@ export function HeroSection() {
 
         {/* Tagline */}
         <p className="font-cormorant text-xl md:text-2xl text-muted-foreground mb-4">
-          A practical library of ideas, writing, and creative work.
+          A library of ideas, study guides, and creative work.
         </p>
 
         {/* Subtitle */}
         <p className="font-cormorant text-lg text-foreground/80 mb-4 max-w-3xl mx-auto">
-          If you are overthinking, lacking direction, or trying to stay disciplined,
-          start with a clear path and move from reflection to action.
+          For readers trying to think more clearly, build steadier discipline, and find a more intentional direction.
         </p>
         
         <p className="font-cormorant text-base text-primary/75 mb-12 max-w-2xl mx-auto">
