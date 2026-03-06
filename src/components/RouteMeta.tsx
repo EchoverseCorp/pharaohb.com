@@ -44,8 +44,9 @@ const metaByRoute: Array<{ test: (p: string) => boolean; meta: MetaConfig }> = [
   {
     test: (p) => p.startsWith('/books'),
     meta: {
-      title: 'Books | Pharaoh B',
-      description: 'Books on mindset, discipline, focus, and personal growth with practical frameworks you can use daily.',
+      title: 'Legacy Books URL | Pharaoh B',
+      description: 'Legacy books route. Use /library as the canonical destination.',
+      noindex: true,
     },
   },
   {

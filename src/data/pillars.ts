@@ -95,7 +95,7 @@ export const pillars: Pillar[] = [
         title: 'Books for Discipline',
         type: 'book',
         description: 'Use long-form systems to make execution automatic.',
-        href: '/books',
+        href: '/library',
       },
     ],
   },
@@ -206,7 +206,7 @@ export const pillars: Pillar[] = [
         title: 'Books',
         type: 'book',
         description: 'Published and in-progress works by Pharaoh B.',
-        href: '/books',
+        href: '/library',
       },
       {
         title: 'Shop + Extensions',
