@@ -14,11 +14,13 @@ interface PageLayoutProps {
 
 export function PageLayout({ children, showFooter = true, showTorus = false }: PageLayoutProps) {
   const scrollProgress = useScrollProgress();
+  const disableTorusForPrerender =
+    typeof navigator !== 'undefined' && Boolean(navigator.webdriver);
 
   return (
-      <div className="relative min-h-screen bg-background">
-        {/* Background visual effect (enabled per-page) */}
-      {showTorus && (
+    <div className="relative min-h-screen bg-background">
+      {/* Background visual effect (enabled per-page) */}
+      {showTorus && !disableTorusForPrerender && (
         <Suspense fallback={null}>
           <GoldenTorus scrollProgress={scrollProgress} />
         </Suspense>
