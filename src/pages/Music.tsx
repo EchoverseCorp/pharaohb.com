@@ -129,7 +129,7 @@ const Music = () => {
                         <div className="flex items-center gap-3 mb-4 text-muted-foreground">
                           <MusicIcon className="w-5 h-5" />
                           <span className="font-cormorant text-sm italic">
-                            Streaming links coming soon
+                            Listen via the platform links below
                           </span>
                         </div>
                         

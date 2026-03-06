@@ -33,6 +33,13 @@ export interface ContentIndexItem {
   sourcePath?: string;
 }
 
+const BLOCKED_SEARCH_TERMS = ['suno'];
+
+function isBlockedSearchItem(item: Pick<ContentIndexItem, 'title' | 'snippet' | 'href' | 'sourcePath'>): boolean {
+  const hay = `${item.title} ${item.snippet} ${item.href} ${item.sourcePath || ''}`.toLowerCase();
+  return BLOCKED_SEARCH_TERMS.some((term) => hay.includes(term));
+}
+
 function needFromFirst100Section(section: First100SectionKey): NeedPathKey {
   if (section === 'think-clearly') return 'think-clearly';
   if (section === 'build-discipline') return 'build-discipline';
@@ -172,7 +179,7 @@ export function buildDefaultContentIndex(): ContentIndexItem[] {
     })),
   ];
 
-  return dedupeById(items);
+  return dedupeById(items).filter((item) => !isBlockedSearchItem(item));
 }
 
 function dedupeById(items: ContentIndexItem[]): ContentIndexItem[] {
@@ -256,7 +263,7 @@ function applyOverrides(items: ContentIndexItem[], raw: RawContentOverrides | nu
       return next;
     });
 
-  return dedupeById(rewritten);
+    return dedupeById(rewritten).filter((item) => !isBlockedSearchItem(item));
 }
 
 function normalizeMediaItems(items: ContentIndexItem[]): ContentIndexItem[] {

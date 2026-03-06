@@ -1,9 +1,10 @@
-import { ReactNode } from 'react';
-import { GoldenTorus } from '@/components/GoldenTorus';
+import { ReactNode, Suspense, lazy } from 'react';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { useScrollProgress } from '@/hooks/useScrollProgress';
 import { AppBreadcrumbs } from '@/components/shared/AppBreadcrumbs';
+
+const GoldenTorus = lazy(() => import('@/components/GoldenTorus').then((mod) => ({ default: mod.GoldenTorus })));
 
 interface PageLayoutProps {
   children: ReactNode;
@@ -15,9 +16,13 @@ export function PageLayout({ children, showFooter = true, showTorus = false }: P
   const scrollProgress = useScrollProgress();
 
   return (
-    <div className="relative min-h-screen bg-background">
-      {/* Background visual effect (enabled per-page) */}
-      {showTorus && <GoldenTorus scrollProgress={scrollProgress} />}
+      <div className="relative min-h-screen bg-background">
+        {/* Background visual effect (enabled per-page) */}
+      {showTorus && (
+        <Suspense fallback={null}>
+          <GoldenTorus scrollProgress={scrollProgress} />
+        </Suspense>
+      )}
       
       {/* Navigation */}
       <Navbar />
