@@ -12,6 +12,26 @@ export default defineConfig(({ mode }) => ({
     },
   },
   plugins: [react()],
+  ssgOptions: {
+    dirStyle: "nested",
+    includedRoutes: () => [
+      "/",
+      "/start-here",
+      "/ideas",
+      "/books",
+      "/tools",
+      "/principles",
+      "/explorations",
+      "/audio",
+      "/pharaoh-b",
+      "/creative",
+      "/study-guides",
+      "/music",
+      "/art",
+      "/shop",
+      "/about",
+    ],
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

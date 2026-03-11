@@ -3,7 +3,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
+import {
+  Navigate,
+  Outlet,
+  useParams,
+  useRoutes,
+  type RouteObject,
+} from "react-router-dom";
 import { RouteMeta } from "./components/RouteMeta";
 
 const Home = lazy(() => import("./pages/Home"));
@@ -40,64 +46,92 @@ const LegacyNewsSlugRedirect = () => {
   return <Navigate to={slug ? `/articles/${slug}` : "/articles"} replace />;
 };
 
-const App = () => (
+const RootLayout = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <RouteMeta />
-        <Suspense fallback={<div className="min-h-screen bg-background" />}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/start" element={<Start />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/articles" element={<News />} />
-            <Route path="/articles/:slug" element={<NewsArticle />} />
-            <Route path="/books" element={<Navigate to="/library" replace />} />
-            <Route path="/library" element={<Canon />} />
-            <Route path="/library/:slug" element={<CanonDetail />} />
-            <Route path="/canon" element={<Navigate to="/library" replace />} />
-            <Route path="/canon/:slug" element={<CanonDetail />} />
-            <Route path="/art" element={<Art />} />
-            <Route path="/art/:slug" element={<ArtDetail />} />
-            <Route path="/music" element={<Music />} />
-            <Route path="/media" element={<Transmissions />} />
-            <Route path="/transmissions" element={<Navigate to="/media" replace />} />
-            <Route path="/creative" element={<Creative />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/think-clearly" element={<PillarPage slug="think-clearly" />} />
-            <Route path="/think-clearly/:slug" element={<MappedContentPage section="think-clearly" />} />
-            <Route path="/build-discipline" element={<PillarPage slug="build-discipline" />} />
-            <Route path="/build-discipline/:slug" element={<MappedContentPage section="build-discipline" />} />
-            <Route path="/find-direction" element={<PillarPage slug="find-direction" />} />
-            <Route path="/find-direction/:slug" element={<MappedContentPage section="find-direction" />} />
-            <Route path="/creative-expression" element={<PillarPage slug="creative-expression" />} />
-            <Route path="/creative-expression/:slug" element={<MappedContentPage section="creative-expression" />} />
-            <Route path="/books-and-tools" element={<PillarPage slug="books-and-tools" />} />
-            <Route path="/books-and-tools/:slug" element={<MappedContentPage section="books-and-tools" />} />
-            <Route path="/study-guides" element={<StudyGuides />} />
-            <Route path="/study-guides/:slug" element={<MappedContentPage section="study-guides" />} />
-            <Route path="/resources/:slug" element={<MappedContentPage section="resources" />} />
-            <Route path="/creative/:slug" element={<MappedContentPage section="creative-media" />} />
-            <Route path="/first-100" element={<First100Hub />} />
-            <Route path="/writings" element={<Writings />} />
-            <Route path="/writings/:slug" element={<WritingDetail />} />
-            <Route path="/echoverse" element={<Echoverse />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/news" element={<Navigate to="/articles" replace />} />
-            <Route path="/news/:slug" element={<LegacyNewsSlugRedirect />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/terms" element={<Terms />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
+      <RouteMeta />
+      <Suspense fallback={<div className="min-h-screen bg-background" />}>
+        <Outlet />
+      </Suspense>
     </TooltipProvider>
   </QueryClientProvider>
 );
+
+export const routes: RouteObject[] = [
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: "start", element: <Start /> },
+      { path: "about", element: <About /> },
+      { path: "articles", element: <News /> },
+      { path: "articles/:slug", element: <NewsArticle /> },
+      { path: "books", element: <Navigate to="/library" replace /> },
+      { path: "library", element: <Canon /> },
+      { path: "library/:slug", element: <CanonDetail /> },
+      { path: "canon", element: <Navigate to="/library" replace /> },
+      { path: "canon/:slug", element: <CanonDetail /> },
+      { path: "art", element: <Art /> },
+      { path: "art/:slug", element: <ArtDetail /> },
+      { path: "music", element: <Music /> },
+      { path: "media", element: <Transmissions /> },
+      { path: "transmissions", element: <Navigate to="/media" replace /> },
+      { path: "creative", element: <Creative /> },
+      { path: "resources", element: <Resources /> },
+      { path: "search", element: <Search /> },
+      { path: "think-clearly", element: <PillarPage slug="think-clearly" /> },
+      {
+        path: "think-clearly/:slug",
+        element: <MappedContentPage section="think-clearly" />,
+      },
+      { path: "build-discipline", element: <PillarPage slug="build-discipline" /> },
+      {
+        path: "build-discipline/:slug",
+        element: <MappedContentPage section="build-discipline" />,
+      },
+      { path: "find-direction", element: <PillarPage slug="find-direction" /> },
+      {
+        path: "find-direction/:slug",
+        element: <MappedContentPage section="find-direction" />,
+      },
+      {
+        path: "creative-expression",
+        element: <PillarPage slug="creative-expression" />,
+      },
+      {
+        path: "creative-expression/:slug",
+        element: <MappedContentPage section="creative-expression" />,
+      },
+      { path: "books-and-tools", element: <PillarPage slug="books-and-tools" /> },
+      {
+        path: "books-and-tools/:slug",
+        element: <MappedContentPage section="books-and-tools" />,
+      },
+      { path: "study-guides", element: <StudyGuides /> },
+      {
+        path: "study-guides/:slug",
+        element: <MappedContentPage section="study-guides" />,
+      },
+      { path: "resources/:slug", element: <MappedContentPage section="resources" /> },
+      { path: "creative/:slug", element: <MappedContentPage section="creative-media" /> },
+      { path: "first-100", element: <First100Hub /> },
+      { path: "writings", element: <Writings /> },
+      { path: "writings/:slug", element: <WritingDetail /> },
+      { path: "echoverse", element: <Echoverse /> },
+      { path: "shop", element: <Shop /> },
+      { path: "news", element: <Navigate to="/articles" replace /> },
+      { path: "news/:slug", element: <LegacyNewsSlugRedirect /> },
+      { path: "contact", element: <Contact /> },
+      { path: "privacy", element: <Privacy /> },
+      { path: "terms", element: <Terms /> },
+      { path: "*", element: <NotFound /> },
+    ],
+  },
+];
+
+const App = () => useRoutes(routes);
 
 export default App;
