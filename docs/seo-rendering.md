@@ -80,3 +80,15 @@ From `dist/index.html`:
 ## Notes
 
 - Homepage torus effect is disabled automatically when `navigator.webdriver` is true, preventing prerender failures in headless mode while preserving normal browser behavior.
+
+## Vercel Build Notes
+
+- The Playwright-based prerender approach described above is the reason recent Vercel deployments failed on March 6, 2026.
+- Vercel build logs showed two concrete failure modes:
+  - missing Playwright browser executable
+  - missing shared library `libnspr4.so` after browser install
+- The verified fix is to remove Playwright from the build entirely and use `vite-react-ssg` instead.
+- Verified clean fix branch:
+  - branch: `codex/vercel-ssg-fix`
+  - commit: `31fa64f`
+  - result: `npm run build` passed and `vercel build` passed
